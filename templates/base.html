@@ -87,11 +87,11 @@
 
       if (!loginSocket || loginSocket.readyState !== WebSocket.OPEN) { 
         // 만약 소켓이 없으면 소켓 생성 -> 로그인을 의미하는 socket생성
-        loginSocket = new WebSocket('ws://' + window.location.host + '/ws/login/');
+        loginSocket = new WebSocket('ws://' + 'port-0-wooks-co-living-5x7y2mlhd1m4s6.sel4.cloudtype.app' + '/ws/login/');
       }
       if (!alarmSocket || alarmSocket.readyState !== WebSocket.OPEN) { 
         // 만약 소켓이 없으면 소켓 생성 -> 로그인을 의미하는 socket생성
-        alarmSocket = new WebSocket('ws://' + window.location.host + '/ws/alarm/');
+        alarmSocket = new WebSocket('ws://' + 'port-0-wooks-co-living-5x7y2mlhd1m4s6.sel4.cloudtype.app' + '/ws/alarm/');
       }
       
 

@@ -2,7 +2,7 @@ const roomName = JSON.parse(document.getElementById('room-name').textContent);
       
 const chatSocket = new WebSocket(
 'ws://'
-+ window.location.host
++ 'port-0-wooks-co-living-5x7y2mlhd1m4s6.sel4.cloudtype.app'
 + '/ws/chat/'
 + roomName
 + '/'
