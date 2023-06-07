@@ -1,12 +1,14 @@
 const roomName = JSON.parse(document.getElementById('room-name').textContent);
       
 const chatSocket = new WebSocket(
-'ws://'
+protocol
++ '//'
 + window.location.host
 + '/ws/chat/'
 + roomName
 + '/'
 );
+
 
 const currentUser = document.getElementById('currentUser').value;
 const retriever = document.getElementById('retriever').value;
