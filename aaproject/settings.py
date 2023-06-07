@@ -37,6 +37,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     # 최상단이 아니면 충돌 위험
     'daphne',
+    'channels',
 
     # 앱
     'accounts',
@@ -207,9 +208,19 @@ DEFAULT_FROM_EMAIL = EMAIL_SENDER_NAME + ' <' + EMAIL_HOST_USER + '>'
 ASGI_APPLICATION = "aaproject.asgi.application"
 CHANNEL_LAYERS = {
     "default": {
-        "BACKEND": "channels_redis.core.RedisChannelLayer",
-        "CONFIG": {
-            "hosts": [("127.0.0.1", 6379)],
-        },
+        "BACKEND": "channels.layers.InMemoryChannelLayer",
     },
 }
+
+CHANNELS_WS_PROTOCOLS = [
+    # 기존 설정들...
+    'channels.security.websocket.origin_validator',
+    'channels.security.websocket.allowed_hosts_only',
+]
+
+CHANNELS = [
+    # 기존 설정들...
+    {
+        'name': 'django.contrib.auth.middleware.AuthenticationMiddleware',
+    },
+]

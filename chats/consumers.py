@@ -1,4 +1,4 @@
-# chat/consumers.py
+# chats/consumers.py
 import json
 from .models import Message, Chatroom
 from accounts.models import User
