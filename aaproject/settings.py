@@ -212,15 +212,3 @@ CHANNEL_LAYERS = {
     },
 }
 
-CHANNELS_WS_PROTOCOLS = [
-    # 기존 설정들...
-    'channels.security.websocket.origin_validator',
-    'channels.security.websocket.allowed_hosts_only',
-]
-
-CHANNELS = [
-    # 기존 설정들...
-    {
-        'name': 'django.contrib.auth.middleware.AuthenticationMiddleware',
-    },
-]

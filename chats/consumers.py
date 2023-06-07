@@ -51,7 +51,7 @@ class LoginConsumer(AsyncWebsocketConsumer):
     async def connect(self):
         await self.accept()
 
-        loginUser = str(self.scope["user"])
+        loginUser = str(self.scope['user'])
         print(loginUser)
         loginStatus = True
 
@@ -68,7 +68,7 @@ class LoginConsumer(AsyncWebsocketConsumer):
     async def disconnect(self, close_code):
         print("logout을 하고 socket과 연결 종료")
 
-        loginUser = str(self.scope["user"])
+        loginUser = str(self.scope['user'])
         print(loginUser)
         loginStatus = False
 
